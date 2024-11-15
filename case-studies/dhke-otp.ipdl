@@ -496,15 +496,6 @@ fold chn OkKey-BobAdvId into chn Key-Bob
 restructure idealPlusSimDHKE
 .
 
-start with realDHKE over deltaDHKE 
-
-call-approx dhkeProof
-
-check-proof idealPlusSimDHKE
-current-protocol
- show-bounds
- quit
-
  start with realOTP over delta
 
  fold chn Recv into chn Out then
@@ -542,15 +533,3 @@ current-protocol
  current-protocol
  show-bounds
  quit
- 
- 
- current-protocol
- eof
-
-  start with idealPlusSimOTP over delta
-
-  fold chn OkMsgAdvId into chn Out then
-  fold chn LeakMsgRcvdIdAdv into chn LeakCtxtNetAdv
-  
-  current-protocol
-
